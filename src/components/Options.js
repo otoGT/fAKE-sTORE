@@ -7,9 +7,10 @@ export default function Options() {
   console.log(price)
   console.log(category)
     return(
-        <div className="h-screen w-1/4">
+        <div className="h-screen w-1/4 gap-1">
             <AiFillHeart className='w-10 h-10 ml-auto'/>
             <div>
+              <h1>price</h1>
               <select name='price' className="border border-black rounded-full"  onChange={e => setPrice(e.target.value)}>
                 <option value='0'>$0</option>
                 <option value='50'>$50</option>
@@ -20,7 +21,9 @@ export default function Options() {
                </select>
              </div>
             <div>
+              <h1>category</h1>
              <select name='category' className="border border-black rounded-full" onChange={e => setCategory(e.target.value)}>
+                <option value='none'>chose category</option>
                 <option value='men`s clothing'>men's clothing</option>
                 <option value='jewelery'>jewelery</option>
                 <option value='electronics'>electronics</option>
